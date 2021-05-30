@@ -24,7 +24,7 @@ function Home() {
             title={<h1>{item.name}</h1>}
             key={item.id}
             extra={
-              <Button onClick={() => history.push('/main/list/' + item.id)}>
+              <Button onClick={() => history.push('/main/list?id=' + item.id)}>
                 了解更多
               </Button>
             }

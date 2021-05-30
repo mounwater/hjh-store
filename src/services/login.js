@@ -6,3 +6,5 @@ import { post } from '../utils/request';
     password,
   }); */
 export const usersLogin = (user) => post('/api/v1/auth/login', user);
+
+export const usersRegister = (user) => post('/api/v1/auth/reg', user);

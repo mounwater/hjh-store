@@ -11,6 +11,7 @@ import User from './User';
 import List from './List';
 import Cart from './Cart';
 import '../assets/css/main.css';
+import Detail from './Detail';
 
 function Main() {
   const { SubMenu } = Menu;
@@ -62,6 +63,9 @@ function Main() {
           </Route>
           <Route path="/main/user">
             <User />
+          </Route>
+          <Route path="/main/detail/:id?">
+            <Detail />
           </Route>
         </div>
       </Content>
