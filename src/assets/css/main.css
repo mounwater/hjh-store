@@ -1,0 +1,50 @@
+.site-layout-content {
+  min-height: 100%;
+  padding: 24px;
+  background: #fff;
+}
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+.ant-card-body {
+  display: flex;
+  padding-left: 196px;
+  /* flex-direction: column;
+  justify-content: center; */
+  align-items: center;
+}
+.ant-card-body p {
+  width: 592px;
+  margin-left: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: '宋体';
+  color: #949494;
+}
+.ant-card-body p:hover {
+  color: #1890ff;
+}
+.ant-layout {
+  min-height: 100%;
+}
+.ant-layout-header {
+  display: flex;
+  background: #ffffff;
+}
+
+.ant-layout-content {
+  margin-top: 30px;
+}
+
+.logo {
+  margin-left: 160px;
+  margin-right: 30px;
+}
