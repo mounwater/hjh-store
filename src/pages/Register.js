@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import { Form, Input, Button, Checkbox, Radio, message } from 'antd';
+import { Form, Input, Button, Radio, message } from 'antd';
 import '../assets/css/register.css';
 import { usersRegister } from '../services/login';
 import FileUpload from '../components/FileUpload';
@@ -29,19 +29,12 @@ function Register() {
       message.error(res.data);
     }
   };
-  /* const onFinish = (values) => {
-    console.log(values);
-  }; */
-
-  /* const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  }; */
   const onChange = (e) => {
     console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
   return (
-    <div className="input">
+    <div className="input register">
       <div className="logo">
         <img
           src="./images/hjhlogo.png"

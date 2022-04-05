@@ -10,7 +10,7 @@
   margin-top: -209px;
   margin-left: -150px;
 }
-.logo {
+.register .logo {
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -29,11 +29,11 @@
 h1 {
   color: #ffffff;
 }
-.ant-form-item-label > label {
+.register .ant-form-item-label > label {
   font-weight: bold;
   color: #ffffff;
 }
-.ant-form {
+.register .ant-form {
   text-align: center;
   display: flex;
   width: 721px;

@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import { Form, Input, Button, Checkbox, message } from 'antd';
-// import '../assets/css/login.css';
+import { Form, Input, Button, message } from 'antd';
 import { usersLogin } from '../services/login';
-import { setToken } from '../utils/tools';
+import { setToken, getToken, removeToken } from '../utils/tools';
 
 const layout = {
   labelCol: { span: 8 },
@@ -14,6 +13,11 @@ const tailLayout = {
 };
 
 function Login() {
+  useEffect(() => {
+    if (getToken) {
+      removeToken();
+    }
+  }, []);
   const history = useHistory();
   const onFinish = async (values) => {
     const res = await usersLogin(values);
@@ -27,9 +31,6 @@ function Login() {
     }
   };
 
-  /* const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  }; */
   return (
     <div
       className="input"
@@ -87,11 +88,6 @@ function Login() {
         >
           <Input.Password />
         </Form.Item>
-
-        {/*  <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item> */}
-
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             登录

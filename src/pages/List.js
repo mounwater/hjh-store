@@ -7,7 +7,7 @@ import { resetImg } from '../utils/tools';
 
 const gridStyle = {
   cursor: 'pointer',
-  width: '25%',
+  width: '20%',
   textAlign: 'center',
 };
 
@@ -16,6 +16,7 @@ function List() {
   const [list, setList] = useState([]);
   const query = new URLSearchParams(useLocation().search);
   const id = query.get('id');
+  const categoryName = query.get('categoryName');
   const getProduct = async () => {
     const res = await loadProducts({ category: id ? id : '' });
     // console.log(res);
@@ -27,7 +28,7 @@ function List() {
   return (
     <div>
       <h1>列表</h1>
-      <Card title="测试">
+      <Card title={categoryName ? categoryName : '全部商品'}>
         {list.map((item) => (
           <Card.Grid
             style={gridStyle}
